@@ -1,6 +1,6 @@
 package gaur.himanshu.august.moviedetails.data
 
-data class Search(
+data class Movie(
     val Poster: String,
     val Title: String,
     val Type: String,

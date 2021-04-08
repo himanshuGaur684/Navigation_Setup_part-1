@@ -62,4 +62,9 @@ dependencies {
 
 
 
+
+    // paging 3
+    implementation "androidx.paging:paging-runtime-ktx:3.0.0-beta03"
+
+
 }
