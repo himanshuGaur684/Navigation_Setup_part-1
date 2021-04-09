@@ -1,10 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="gaur.himanshu.august.moviedetails.data.Movie" />
+
+        <variable
+            name="movie"
+            type="Movie" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginTop="4dp"
+
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content">
 
 
+            <ImageView
+                android:id="@+id/movie_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="@string/poster_image"
+                android:padding="4dp"
+                android:src="@color/purple_700"
+                app:load="@{movie.poster}" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/movie_title"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_image"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="@{movie.title}"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                tools:text="hello how are you" />
 
 
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_title"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:text="@{`Year :` + movie.year}"
+                android:textSize="18dp"
+                tools:text="hello how are you" />
 
-</RelativeLayout>
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>
