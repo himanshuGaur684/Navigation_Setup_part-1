@@ -43,9 +43,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/movie_image"
                 android:layout_marginStart="4dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginEnd="4dp"
                 android:text="@{movie.title}"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textStyle="bold"
                 tools:text="hello how are you" />
 
@@ -57,9 +58,10 @@
                 android:layout_below="@+id/movie_title"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="4dp"
                 android:text="@{`Year :` + movie.year}"
-                android:textSize="18dp"
+                android:textSize="14dp"
                 tools:text="hello how are you" />
 
         </RelativeLayout>
