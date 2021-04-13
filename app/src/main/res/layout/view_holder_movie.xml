@@ -39,13 +39,15 @@
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/movie_title"
                 style="@style/TextAppearance.AppCompat.Body1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/movie_image"
                 android:layout_marginStart="4dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginEnd="4dp"
                 android:text="@{movie.title}"
+                android:gravity="center_horizontal"
+
                 android:textSize="16dp"
                 android:textStyle="bold"
                 tools:text="hello how are you" />
@@ -59,7 +61,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="4dp"
+                android:layout_marginBottom="8dp"
                 android:text="@{`Year :` + movie.year}"
                 android:textSize="14dp"
                 tools:text="hello how are you" />

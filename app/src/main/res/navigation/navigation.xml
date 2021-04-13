@@ -18,5 +18,11 @@
         android:id="@+id/detailsFragment"
         android:name="gaur.himanshu.august.moviedetails.ui.details.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="imdb_id"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>
